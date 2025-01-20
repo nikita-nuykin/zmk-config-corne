@@ -54,10 +54,13 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp LCMD &kp LEFT_ARROW>,
-                <&macro_release>;
+                <&kp LCTRL &kp LCMD>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL &kp LCMD>;
 
-            label = "GOTOLEFTSCREEN";
+            label = "rectangleToLeftSide";
         };
 
         rectangleToRightSide: rectangleToRightSide {
@@ -65,7 +68,7 @@
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp LCTRL &kp LCMD &kp RIGHT_ARROW>;
 
-            label = "GOTORIGHTSCREEN";
+            label = "rectangleToRightSide";
         };
 
         rectangleCenter: rectangleCenter {
