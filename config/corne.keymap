@@ -66,15 +66,27 @@
         rectangleToRightSide: rectangleToRightSide {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LCTRL &kp LCMD &kp RIGHT_ARROW>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LCMD>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LCTRL &kp LCMD>;
 
-            label = "rectangleToRightSide";
+            label = "RECTANGLETORIGHTSIDE";
         };
 
         rectangleCenter: rectangleCenter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LCTRL &kp LCMD &kp C>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LCMD>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCTRL &kp LCMD>;
 
             label = "RECTANGLECENTER";
         };
@@ -82,25 +94,43 @@
         rectangleFullScreen: rectangleFullScreen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LCTRL &kp LCMD &kp F>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LCMD>,
+                <&macro_tap>,
+                <&kp F>,
+                <&macro_release>,
+                <&kp LCTRL &kp LCMD>;
 
             label = "RECTANGLEFULLSCREEN";
         };
 
-        goToLeftScreen: goToLeftScreen {
+        goToLeft: goToLeft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LCTRL &kp LEFT_ARROW>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL>;
 
-            label = "GOTOLEFTSCREEN";
+            label = "GOTOLEFT";
         };
 
-        goToRightScreen: goToRightScreen {
+        goToRight: goToRight {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LCTRL &kp RIGHT_ARROW>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL>;
 
-            label = "GOTORIGHTSCREEN";
+            label = "GOTORIGHT";
         };
     };
 
@@ -147,7 +177,7 @@
             bindings = <
 &trans  &none  &none  &msc SCRL_UP    &kp PG_UP      &kp HOME        &rectangleToLeftSide  &rectangleCenter  &rectangleFullScreen  &rectangleToRightSide  &none  &none
 &trans  &none  &none  &msc SCRL_DOWN  &kp PAGE_DOWN  &kp END         &kp LEFT_ARROW        &kp DOWN_ARROW    &kp UP_ARROW          &kp RIGHT              &none  &kp ENTER
-&trans  &none  &none  &none           &none          &none           &none                 &goToLeftScreen   &goToRightScreen      &none                  &none  &kp RIGHT_SHIFT
+&trans  &none  &none  &none           &none          &none           &none                 &goToLeft         &goToRight            &none                  &none  &kp RIGHT_SHIFT
                       &trans          &trans         &kp LEFT_ALT    &trans                &trans            &trans
             >;
         };
