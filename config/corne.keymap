@@ -10,14 +10,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        layer3 {
-            bindings = <&mo 3>;
-            key-positions = <37 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         ss_hs_modmorph: ss_hs_modmorph {
@@ -189,6 +182,15 @@
 &kp LEFT_SHIFT  &none   &kp C_PREV  &none             &kp C_VOLUME_DOWN  &kp C_BRI_DN    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
                                     &trans            &trans             &trans          &trans      &trans        &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        thirdLayer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
