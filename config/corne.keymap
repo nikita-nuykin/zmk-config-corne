@@ -47,6 +47,56 @@
         };
     };
 
+    macros {
+        rectangleToLeftSide: goToLeftScreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LCTRL &kp LCMD &kp LEFT_ARROW>;
+
+            label = "GOTOLEFTSCREEN";
+        };
+
+        rectangleToRightSide: goToRightScreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LCTRL &kp LCMD &kp RIGHT_ARROW>;
+
+            label = "GOTORIGHTSCREEN";
+        };
+
+        rectangleCenter: rectangleCenter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LCTRL &kp LCMD &kp C>;
+
+            label = "RECTANGLECENTER";
+        };
+
+        rectangleFullScreen: rectangleFullScreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LCTRL &kp LCMD &kp F>;
+
+            label = "RECTANGLEFULLSCREEN";
+        };
+
+        goToLeftScreen: goToLeftScreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LCTRL &kp LEFT_ARROW>;
+
+            label = "GOTOLEFTSCREEN";
+        };
+
+        goToRightScreen: goToRightScreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LCTRL &kp RIGHT_ARROW>;
+
+            label = "GOTORIGHTSCREEN";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
