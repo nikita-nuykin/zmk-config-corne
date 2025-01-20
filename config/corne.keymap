@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     combos {
@@ -141,10 +142,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &none  &none  &kp K_SCROLL_UP    &kp PG_UP      &kp HOME        &rectangleToLeftSide  &rectangleCenter  &rectangleFullScreen  &rectangleToRightSide  &none  &none
-&trans  &none  &none  &kp K_SCROLL_DOWN  &kp PAGE_DOWN  &kp END         &kp LEFT_ARROW        &kp DOWN_ARROW    &kp UP_ARROW          &kp RIGHT              &none  &kp ENTER
-&trans  &none  &none  &none              &none          &none           &none                 &goToLeftScreen   &goToRightScreen      &none                  &none  &kp RIGHT_SHIFT
-                      &trans             &trans         &kp LEFT_ALT    &trans                &trans            &trans
+&trans  &none  &none  &msc SCRL_UP    &kp PG_UP      &kp HOME        &rectangleToLeftSide  &rectangleCenter  &rectangleFullScreen  &rectangleToRightSide  &none  &none
+&trans  &none  &none  &msc SCRL_DOWN  &kp PAGE_DOWN  &kp END         &kp LEFT_ARROW        &kp DOWN_ARROW    &kp UP_ARROW          &kp RIGHT              &none  &kp ENTER
+&trans  &none  &none  &none           &none          &none           &none                 &goToLeftScreen   &goToRightScreen      &none                  &none  &kp RIGHT_SHIFT
+                      &trans          &trans         &kp LEFT_ALT    &trans                &trans            &trans
             >;
         };
 
