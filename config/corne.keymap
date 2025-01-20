@@ -51,7 +51,10 @@
         rectangleToLeftSide: rectangleToLeftSide {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LCTRL &kp LCMD &kp LEFT_ARROW>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LCMD &kp LEFT_ARROW>,
+                <&macro_release>;
 
             label = "GOTOLEFTSCREEN";
         };
